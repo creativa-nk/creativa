@@ -33,7 +33,7 @@ section{
 .triangulo2 {
     position: absolute;
     top: 700px;
-    left: 700px;
+    left: 700px; 
     width: 100px;
     height: 85px; 
     background-color: transparent; 
@@ -114,11 +114,17 @@ section{
 }
 .circulo2{
     position: absolute;
-    left: 700px;
-    background: rgb(255, 230, 0) ;
-    opacity: .5;
-    width: 290px;
-    height: 290px;
+    top: 100px;
+    left: 900px;
+    
+    background: 
+    linear-gradient(135deg, #07070780 25%, transparent 25%) -50px 0,
+    linear-gradient(225deg, #07070780 25%, transparent 25%) -50px 0,
+    linear-gradient(315deg, #07070780 25%, transparent 25%),
+    linear-gradient(45deg, #07070780 25%, transparent 25%);	
+    background-size: 50px 50px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -128,25 +134,17 @@ section{
 .circulo2::after{
     content: '';
     position: absolute;
-    top: 20px;
-    left: 20px;
-    background: 
-    linear-gradient(135deg, #070707 25%, transparent 25%) -50px 0,
-    linear-gradient(225deg, #070707 25%, transparent 25%) -50px 0,
-    linear-gradient(315deg, #070707 25%, transparent 25%),
-    linear-gradient(45deg, #070707 25%, transparent 25%);	
-    background-size: 50px 50px;
-    width: 300px;
-    height: 300px;
+    top: -30px;
+    left: -30px;
+    background: rgb(255, 230, 0) ;
+    width: 290px;
+    height: 290px;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
 }
-
-
-
 
 
 .cuadrado{
@@ -162,8 +160,6 @@ section{
     linear-gradient(315deg, #070707 25%, transparent 25%),
     linear-gradient(45deg, #070707 25%, transparent 25%);	
     background-size: 35px 40px;
-    /* animation: movimientos 10s linear infinite;
-    -webkit-animation: movimientos 10s linear infinite; */
 }
 .cuadrado::before{
     content: '';
@@ -173,8 +169,6 @@ section{
     position: absolute;
     top: 50px;
     left: 50px;
-    /* animation: movimientos 10s linear infinite;
-    -webkit-animation: movimientos 10s linear infinite; */
 }
 
 .cuadrado2{
@@ -189,75 +183,31 @@ section{
     background-color: rgba(71, 211, 255, 0);
 }
 
-
-
-
-
-/* @keyframes movimientos{
-    0%{
-        transform: scale(.5);
-        -webkit-transform: scale(.5);
-        -moz-transform: scale(.5);
-        -ms-transform: scale(.5);
-        -o-transform: scale(.5);
-}
-    30%{
-        transform: scale(1)rotate(45deg) translateX(30%);
-        -webkit-transform: scale(1)rotate(45deg) translateX(30%);
-        -moz-transform: scale(1)rotate(45deg) translateX(30%);
-        -ms-transform: scale(1)rotate(45deg) translateX(30%);
-        -o-transform: scale(1)rotate(45deg) translateX(30%);
-}
-    60%{
-        transform: scale(.7) translateY(50%);
-        -webkit-transform: scale(.7) translateY(50%);
-        -moz-transform: scale(.7) translateY(50%);
-        -ms-transform: scale(.7) translateY(50%);
-        -o-transform: scale(.7) translateY(50%);
-}
-    90%{
-        transform: scale(.3) rotate(70deg);
-        -webkit-transform: scale(.3) rotate(70deg);
-        -moz-transform: scale(.3) rotate(70deg);
-        -ms-transform: scale(.3) rotate(70deg);
-        -o-transform: scale(.3) rotate(70deg);
-}
-    100%{
-        transform: scale(.5);
-        -webkit-transform: scale(.5);
-        -moz-transform: scale(.5);
-        -ms-transform: scale(.5);
-        -o-transform: scale(.5);
-    }
-} */
-
-
-
-
-
-    .figuras{
-        animation: fadeInDownBig  1s ease-out forwards;
-        -webkit-animation: fadeInDownBig  1s ease-out forwards;
+/*---------------- ANIMATION------------------------------ */
+.figuras{
+    animation: fadeInDownBig  1s 3s ease-out forwards;
+    -webkit-animation: fadeInDownBig  1s 3s ease-out forwards;
 }
 
 
 @keyframes fadeInDownBig {
-    from {
+    0% {
+     top: -100%;
      left: 50%;
      right: 0%;
-     transform: translateY(-100%)rotate(45deg);
-     -webkit-transform:translateY(-100%)rotate(45deg);
-     -moz-transform:translateY(-100%)rotate(45deg);
-     -ms-transform:translateY(-100%)rotate(45deg);
-     -o-transform:translateY(-100%)rotate(45deg);
+     transform:rotate(180deg) scale(.1);
+     -webkit-transform:rotate(180deg) scale(.1);
+     -moz-transform:rotate(180deg) scale(.1);
+     -ms-transform:rotate(180deg) scale(.1);
+     -o-transform:rotate(180deg) scale(.1);
+  } 
+  50%{
+    opacity: 1;
+    transform:rotate(40deg)    ;
+    -webkit-transform:rotate(40deg)    ;
+    -moz-transform:rotate(40deg)    ;
+    -ms-transform:rotate(40deg)    ;
+    -o-transform:rotate(40deg)    ;
 }
-  
-    to {
-        transform: translateY(100%) ;
-        -webkit-transform: translateY(100%) ;
-        -moz-transform: translateY(100%) ;
-        -ms-transform: translateY(100%) ;
-        -o-transform: translateY(100%) ;
 }
-  }
     
