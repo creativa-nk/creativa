@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+div{
+    position: absolute;
+}
+.container-triangulo{
+    width: 100%;
+    height: 100%;
+    background: cadetblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.triangulo{
+    /* background: brown; */
+    /* clip-path: polygon(50% 0%, 35% 29%, 66% 29%); */
+    /*clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    *//* width: 100%;
+    max-width: 700px;
+    height: 100%; */
+    width: 100%; 
+    height: 0; 
+    border-left: 100px solid #f0ad4e;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent; 
+    animation: movimientos 8s linear infinite;
+    -webkit-animation: movimientos 8s linear infinite;
+}
+.circulo{
+    background: coral;
+    clip-path: polygon(0 0, 24% 0, 24% 10%, 0 24%);
+    width: 100%;
+    height: 100%;
+    animation: movimientos 12s linear infinite;
+    -webkit-animation: movimientos 12s linear infinite;
+}
+.palito{
+    background: rgb(98, 98, 224);
+    width: 200px;
+    height: 200px;
+    /* animation: movimientos 10s linear infinite;
+    -webkit-animation: movimientos 10s linear infinite; */
+}
+
+@keyframes movimientos{
+    0%{
+        transform: scale(.5);
+        -webkit-transform: scale(.5);
+        -moz-transform: scale(.5);
+        -ms-transform: scale(.5);
+        -o-transform: scale(.5);
+}
+    30%{
+        transform: scale(1)rotate(45deg) translateX(30%);
+        -webkit-transform: scale(1)rotate(45deg) translateX(30%);
+        -moz-transform: scale(1)rotate(45deg) translateX(30%);
+        -ms-transform: scale(1)rotate(45deg) translateX(30%);
+        -o-transform: scale(1)rotate(45deg) translateX(30%);
+}
+    60%{
+        transform: scale(.7) translateY(50%);
+        -webkit-transform: scale(.7) translateY(50%);
+        -moz-transform: scale(.7) translateY(50%);
+        -ms-transform: scale(.7) translateY(50%);
+        -o-transform: scale(.7) translateY(50%);
+}
+    90%{
+        transform: scale(.3) rotate(70deg);
+        -webkit-transform: scale(.3) rotate(70deg);
+        -moz-transform: scale(.3) rotate(70deg);
+        -ms-transform: scale(.3) rotate(70deg);
+        -o-transform: scale(.3) rotate(70deg);
+}
+    100%{
+        transform: scale(.5);
+        -webkit-transform: scale(.5);
+        -moz-transform: scale(.5);
+        -ms-transform: scale(.5);
+        -o-transform: scale(.5);
+    }
+}
