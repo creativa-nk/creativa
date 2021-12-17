@@ -3,54 +3,197 @@
     padding: 0;
     box-sizing: border-box;
 }
+body, html{
+    width: 100vw;
+    height: 100vh; 
+}
 section{
     width: 100vw;
-    height: 100vh;
-    position: relative;
+    height: 100%;
 }
-div{
-    position: absolute;
-}
-.container-triangulo{
+
+.container-figuras{
     width: 100%;
     height: 100%;
-    background: cadetblue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   /*  background: cadetblue; */
 }
 .triangulo{
-    /* background: brown; */
-    /* clip-path: polygon(50% 0%, 35% 29%, 66% 29%); */
-    /*clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    *//* width: 100%;
-    max-width: 700px;
-    height: 100%; */
-    width: 100%; 
-    height: 0; 
-    border-left: 100px solid #f0ad4e;
-    border-top: 50px solid transparent;
-    border-bottom: 50px solid transparent; 
-    animation: movimientos 8s linear infinite;
-    -webkit-animation: movimientos 8s linear infinite;
+    position: relative;
+    top: 50px;
+    left: 600px;
+    width: 0%; 
+    height: 0%; 
+    border-left: 200px solid #f0ac4e83;
+    border-top: 100px solid transparent;
+    border-bottom: 100px solid transparent; 
+    overflow: hidden;
+   /*  animation: movimientos 8s linear infinite;
+    -webkit-animation: movimientos 8s linear infinite; */
 }
-.circulo{
-    background: coral;
-    clip-path: polygon(0 0, 24% 0, 24% 10%, 0 24%);
-    width: 100%;
-    height: 100%;
-    animation: movimientos 12s linear infinite;
-    -webkit-animation: movimientos 12s linear infinite;
+.triangulo2 {
+    position: absolute;
+    top: 700px;
+    left: 700px;
+    width: 100px;
+    height: 85px; 
+    background-color: transparent; 
+    background-image: linear-gradient(to right bottom, transparent 49%, red 51%), 
+    linear-gradient(to left bottom, transparent 49%, red 51%); 
+    background-size: 50.1% 100%; 
+    background-position: 0 0, right top; 
+    background-repeat: no-repeat; 
+    }
+.triangulo2::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: 700px;
+    width: 200px;
+    height: 185px;
+    transform:rotate(20deg) ;
+    background-color: transparent;
+    background-image: linear-gradient(to right bottom, transparent 49%, rgb(0, 153, 255) 51%),     linear-gradient(to left bottom, transparent 49%, rgb(0, 153, 255) 51%);
+    background-size: 50.1% 100%;
+    background-position: 0 0, right top;
+    background-repeat: no-repeat;
+    -webkit-transform:rotate(20deg) ;
+    -moz-transform:rotate(20deg) ;
+    -ms-transform:rotate(20deg) ;
+    -o-transform:rotate(20deg) ;
 }
-.palito{
+.triangulo2::after {
+    content: '';
+    position: absolute;
+    top:150px;
+    left: 90px;
+    width: 250px;
+    height: 200px;
+    transform:rotate(20deg) ;
+    background-color: transparent;
+    background-image: linear-gradient(to right bottom, transparent 49%, rgb(255, 230, 0) 51%),     linear-gradient(to left bottom, transparent 49%, rgb(255, 230, 0) 51%);
+    background-size: 50.1% 100%;
+    background-position: 0 0, right top;
+    background-repeat: no-repeat;
+    -webkit-transform:rotate(20deg) ;
+    -moz-transform:rotate(20deg) ;
+    -ms-transform:rotate(20deg) ;
+    -o-transform:rotate(20deg) ;
+}   
+.circulo1{
+    position: absolute;
+    background: red ;
+    top: 50px;
+    left: 120px;
+    opacity: .5;
+    width: 290px;
+    height: 290px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;  
+}
+.circulo1::before{
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(0, 0, 0, 0) 5%,
+        rgba(0, 0, 0, 0) 6%,
+        #000000 10px,
+        #070707 30px);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.circulo2{
+    position: absolute;
+    left: 700px;
+    background: rgb(255, 230, 0) ;
+    opacity: .5;
+    width: 290px;
+    height: 290px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;  
+}
+.circulo2::after{
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: 
+    linear-gradient(135deg, #070707 25%, transparent 25%) -50px 0,
+    linear-gradient(225deg, #070707 25%, transparent 25%) -50px 0,
+    linear-gradient(315deg, #070707 25%, transparent 25%),
+    linear-gradient(45deg, #070707 25%, transparent 25%);	
+    background-size: 50px 50px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+
+
+
+
+.cuadrado{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: 500px;
+    left: 50px;
+    opacity: .5;
+    background: 
+    linear-gradient(135deg, #070707 25%, transparent 25%) -50px 0,
+    linear-gradient(225deg, #070707 25%, transparent 25%) -50px 0,
+    linear-gradient(315deg, #070707 25%, transparent 25%),
+    linear-gradient(45deg, #070707 25%, transparent 25%);	
+    background-size: 35px 40px;
+    /* animation: movimientos 10s linear infinite;
+    -webkit-animation: movimientos 10s linear infinite; */
+}
+.cuadrado::before{
+    content: '';
     background: rgb(98, 98, 224);
     width: 200px;
     height: 200px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
     /* animation: movimientos 10s linear infinite;
     -webkit-animation: movimientos 10s linear infinite; */
 }
 
-@keyframes movimientos{
+.cuadrado2{
+    width: 300px;
+    height: 400px;
+    position: relative;
+    top: 100px;
+    left: 500px;
+    opacity: .5;
+    background-image: radial-gradient(#070707 4px, transparent 4px);
+    background-size: 18px 18px;
+    background-color: rgba(71, 211, 255, 0);
+}
+
+
+
+
+
+/* @keyframes movimientos{
     0%{
         transform: scale(.5);
         -webkit-transform: scale(.5);
@@ -86,4 +229,35 @@ div{
         -ms-transform: scale(.5);
         -o-transform: scale(.5);
     }
+} */
+
+
+
+
+
+    .figuras{
+        animation: fadeInDownBig  1s ease-out forwards;
+        -webkit-animation: fadeInDownBig  1s ease-out forwards;
 }
+
+
+@keyframes fadeInDownBig {
+    from {
+     left: 50%;
+     right: 0%;
+     transform: translateY(-100%)rotate(45deg);
+     -webkit-transform:translateY(-100%)rotate(45deg);
+     -moz-transform:translateY(-100%)rotate(45deg);
+     -ms-transform:translateY(-100%)rotate(45deg);
+     -o-transform:translateY(-100%)rotate(45deg);
+}
+  
+    to {
+        transform: translateY(100%) ;
+        -webkit-transform: translateY(100%) ;
+        -moz-transform: translateY(100%) ;
+        -ms-transform: translateY(100%) ;
+        -o-transform: translateY(100%) ;
+}
+  }
+    
