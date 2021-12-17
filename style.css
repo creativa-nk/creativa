@@ -70,7 +70,7 @@ section{
 
 .triangulo2 {
     position: absolute;
-    top: 60%;
+    top: 70%;
     left: 50%;
     width: 100px;
     height: 85px;
@@ -103,8 +103,8 @@ section{
 .triangulo2::after {
     content: '';
     position: absolute;
-    top:150px;
-    left: 90px;
+    top:100px;
+    left: 200px;
     width: 250px;
     height: 200px;
     transform:rotate(20deg) ;
@@ -153,7 +153,7 @@ section{
 }
 .circulo2{
     position: absolute;
-    top: 15%;
+    top: 20%;
     left: 70%;
     background-image: repeating-conic-gradient(#030303ca 0% 25%, rgba(71, 211, 255, 0) 0% 50%);
     background-position: 0 0, 41px 41px;
@@ -171,8 +171,8 @@ section{
 .circulo2::after{
     content: '';
     position: absolute;
-    top: -30px;
-    left: -30px;
+    top: -90px;
+    left: -90px;
     background: rgb(255, 230, 0) ;
     width: 290px;
     height: 290px;
