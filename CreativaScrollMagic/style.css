@@ -1,0 +1,80 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body{
+    width: 100vw;
+    height: 100vh;
+    scroll-behavior: smooth;
+  }
+  
+
+::-webkit-scrollbar {display: none;}
+  
+  .banner{
+    width: 100%;
+    height: 100vh;
+    background-color: #CCC;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+.texto{
+    position: absolute;
+    text-align: center;
+}
+  h1{
+    color: white;
+    letter-spacing: 2rem;
+    text-transform: uppercase;
+    font-size: 15rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    opacity: 0;
+    animation:titulo 2s ease-in-out forwards;
+    -webkit-animation:titulo 2s ease-in-out forwards;
+}
+.subtitle{
+    color: white;
+}
+  
+  #banner_1{
+    background-image: url('./img/pinzas-rojo.png');
+    background-size: cover;
+  }
+  
+  #banner_2{
+    background-image: url('./img/pinzas-rosa.png');
+  }
+  #banner_3{
+    background-image: url('./img/pinzas-amarillas-flores.png');
+  }
+  #banner_4{
+    background-image: url('./img/pinzas-verdes.png');
+  }
+  #banner_5{
+    background-image: url('./img/pinzas-azulclaro-estampado.png');
+    background-size: cover;
+  }
+  
+  #banner_6{
+    background-image: url('./img/pinzas-azules.png');
+  }
+  #banner_7{
+    background-image: url('./img/pinzas-violetas.png');
+  }
+
+
+
+  /* -------------------------- */
+
+  @keyframes titulo{
+      to{
+          opacity: 1;
+      }
+  }

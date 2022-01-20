@@ -1,0 +1,137 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:700);
+
+
+body {
+  margin: 0; 
+  padding: 0;
+  font-size: 48px;
+  font-family: 'Source Sans Pro', sans-serif;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100vw;
+}
+
+.left {
+  width: 100%;
+  height: auto;
+  /* background: #ff005d; */
+  color: #fff;
+  float: left;
+  text-align: center;
+}
+.arrow{
+    height: 500px;
+    width: 20vw;
+    margin: 4rem auto;
+    background-size: cover;
+    background-position: 40% 75%;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+.left .arrow:nth-child(1){
+    background-image: url('./img/pinzas\ rojas.jpg');
+}
+.left .arrow:nth-child(2){
+    background-image: url('./img/IMG_20201004_152627_767.jpg');
+}
+.left .arrow:nth-child(3){
+    background-image: url('./img/IMG_20200911_151240_530.jpg');
+}
+.left .arrow:nth-child(4){
+    background-image: url('./img/IMG_20201029_200515_135.jpg');
+}
+.left .arrow:nth-child(5){
+    background-image: url('./img/zulai.jpg');
+}
+.left .arrow:nth-child(6){
+    background-image: url('./img/triangulos.jpg');
+}
+.left .arrow:nth-child(7){
+    background-image: url('./img/IMG_20201218_230821_788.jpg');
+    background-size: 110%;
+}
+.left .arrow:nth-child(8){
+    background-image: url('./img/girafa.jpg');
+}
+.left .arrow:nth-child(9){
+    background-image: url('./img/IMG_20201011_124036_898.jpg');
+}
+.left .arrow:nth-child(10){
+    background-image: url('./img/IMG_20201219_132137_208.jpg');
+}
+.left .arrow:nth-child(11){
+    background-image: url('./img/violeta.jpg');
+}
+.left .arrow:nth-child(12){
+    background-image: url('./img/IMG_20201006_140034.jpg');
+}
+
+
+.right {
+  width: 50%;
+  height: 100vh;
+  margin-top: -5500px; /*Start offset, put it at same as*/
+  /* background: #191f27; */
+  color: #35ff99;
+  /* float: left; */
+  text-align: center;
+}
+.right .arrow:nth-child(1){
+    background-image: url('./img/IMG_20201004_152627_767.jpg');
+}
+.right .arrow:nth-child(2){
+    background-image: url('./img/pinzas-amarillas-flores.png');
+    background-position: 50% 80%;
+    background-size: 200%;
+}
+.right .arrow:nth-child(3){
+    background-image: url('./img/IMG_20200911_162359_439.jpg');
+}
+.right .arrow:nth-child(4){
+    background-image: url('./img/japon.jpg');
+}
+.right .arrow:nth-child(5){
+    background-image: url('./img/IMG_20201006_140034.jpg');
+}
+.right .arrow:nth-child(6){
+    background-image: url('./img/camello.jpg');
+}
+.right .arrow:nth-child(7){
+    background-image: url('./img/IMG_20201113_225538_605.jpg');
+}
+.right .arrow:nth-child(8){
+    background-image: url('./img/IMG_20200930_185729_994.jpg');
+}
+.right .arrow:nth-child(9){
+    background-image: url('./img/IMG_20201029_102836_418.jpg');
+}
+.right .arrow:nth-child(10){
+    background-image: url('./img/IMG_20201011_124036_898.jpg');
+}
+.right .arrow:nth-child(11){
+    background-image: url('./img/IMG_20201217_114915_591.jpg');
+}
+.right .arrow:nth-child(12){
+    background-image: url('./img/IMG_20201011_124036_898.jpg');
+}
+
+@media (max-width:768px){
+    .pc{
+        display: none;
+    }
+    .arrow{
+        height: 200px;
+        width: 45vw;
+        margin: 10px auto;
+    }
+    .right {
+        width: 50%;
+        height: 100vh;
+        margin-top: -2000px;
+    }
+}
+
