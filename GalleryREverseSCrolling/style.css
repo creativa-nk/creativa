@@ -7,22 +7,23 @@ body {
   font-size: 48px;
   font-family: 'Source Sans Pro', sans-serif;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   width: 100vw;
 }
 
 .left {
-  width: 100%;
-  height: auto;
-  /* background: #ff005d; */
   color: #fff;
   float: left;
   text-align: center;
 }
 .arrow{
-    height: 500px;
-    width: 20vw;
-    margin: 4rem auto;
+  /*   height: 35vh;
+    min-height: 200px;
+    width: 500px;
+    min-width: 150px; */
+    width: calc(100vh/4);
+    height: 30vh;
+    margin: 2vw auto;
     background-size: cover;
     background-position: 40% 75%;
     background-repeat: no-repeat;
@@ -52,7 +53,6 @@ body {
 }
 .left .arrow:nth-child(7){
     background-image: url('./img/IMG_20201218_230821_788.jpg');
-    background-size: 110%;
 }
 .left .arrow:nth-child(8){
     background-image: url('./img/girafa.jpg');
@@ -75,9 +75,7 @@ body {
   width: 50%;
   height: 100vh;
   margin-top: -5500px; /*Start offset, put it at same as*/
-  /* background: #191f27; */
-  color: #35ff99;
-  /* float: left; */
+  color: #9e9e9e;
   text-align: center;
 }
 .right .arrow:nth-child(1){
@@ -86,7 +84,6 @@ body {
 .right .arrow:nth-child(2){
     background-image: url('./img/pinzas-amarillas-flores.png');
     background-position: 50% 80%;
-    background-size: 200%;
 }
 .right .arrow:nth-child(3){
     background-image: url('./img/IMG_20200911_162359_439.jpg');
@@ -123,15 +120,21 @@ body {
     .pc{
         display: none;
     }
-    .arrow{
-        height: 200px;
-        width: 45vw;
-        margin: 10px auto;
-    }
     .right {
-        width: 50%;
-        height: 100vh;
-        margin-top: -2000px;
+        margin-top: -3500px;
+    } 
+    .arrow{
+        width: calc(100vh/4 - 2rem);
+        height:calc(100vh/4 - 2rem) ;
     }
 }
-
+@media (max-width:425px){
+    .right {
+        margin-top: -2000px;
+    } 
+    .arrow{
+        width: calc(100vh/5 - 3rem);
+        height: calc(100vh/5 - 3rem);
+        font-size: 1.5rem;
+    }
+}
