@@ -12,19 +12,29 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
 } 
-  .caption {
-    position: absolute;
-    top: 50%;
-    text-align: center;
-    width: 100%;
-    color: white;
-    font-size: 25px;
-    letter-spacing: 10px;
-  }    
-    span {
-      padding: 18px;
-      background-color: #111;
-    }
+.caption {
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  width: 100%;
+  color: white;
+  font-size: 25px;
+  letter-spacing: 10px;
+}    
+span {
+  padding: 18px;
+  background-color: rgb(15, 15, 15);
+ 
+}
+/* #animado{
+  animation: rotate 1s linear infinite;
+  -webkit-animation: rotate 1s linear infinite;
+} */
+
+/* #animado{
+  animation: move 1s linear infinite;
+  -webkit-animation: move 1s linear infinite;
+} */
     
     span.less-height,
     span.scroll-up,
@@ -81,4 +91,40 @@ h3 {
   color: #ddd;
   background-color: rgb(40, 46, 52);
   padding: 50px 80px;
+}
+
+
+/* ----------------------- */
+@keyframes move {
+  0%{
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+}
+  100%{
+    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+}
+}
+
+@keyframes rotate {
+  0%{
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+}
+  100%{
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
 }

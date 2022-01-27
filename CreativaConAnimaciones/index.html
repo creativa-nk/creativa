@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Creativa con animaciones</title>
+</head>
+<body>
+    <div class="line-container">
+        <svg preserveAspectRatio='xMidYMax meet' viewBox="0 0 1440 2670" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M530 0V462H673C617.155 554.164 585.845 605.836 530 698L400 490.5H530V931.5V1250H615L530 1383H615L530 1515V1863H748V2086H974V2312H748V2534H530V2670M722 0V194H928V388H1144V584H1356H1438V1170H956V1670H1438V1863C1438 1863 1333.52 1881 1332 1972C1330.48 2063 1438 2074 1438 2074C1438 2074 1290 2084 1272 2234C1272 2390 1438 2410 1438 2410V2670M0 0V750C0 750 235 760 229 974C223 1188 0 1188.5 0 1188.5C0 1188.5 234 1202 229 1418C224 1634 0 1634 0 1634C0 1634 239.485 1647 229 1863C218.515 2079 0 2074 0 2074V2670" stroke="black" stroke-width="7"/>
+            </svg>
+   </div>
+
+    <section class="one">
+        <h1 class="scroll" data-rate='.5' data-direction="vertical">CREATIVA</h1>
+    </section>
+
+   <section class="two">
+       <h1 class="scroll" data-rate='.2' data-direction="vertical">Click to see</h1>
+       <p>Keep scrolling</p>
+   </section>
+    <section class="three" data-rate='.3' >
+       <!-- <img src="./img/pinzas-amarillas-flores.png" alt=""> -->
+    </section>
+    <section class=""></section>
+
+
+ <!--    <div class="container_banners">
+        <div class="banner" id="banner_1"></div>
+        <div class="banner" id="banner_2"></div>
+        <div class="banner" id="banner_3"></div>
+        <div class="banner" id="banner_4"></div>
+        <div class="banner" id="banner_5"></div>
+        <div class="banner" id="banner_6"></div>
+        <div class="banner" id="banner_7"></div>
+    </div> -->
+
+
+
+   
+   <script>
+   
+var path = document.querySelector('path');
+var pathLength = path.getTotalLength();
+
+path.style.strokeDasharray = pathLength + ' ' + pathLength;
+path.style.strokeDashoffset = pathLength;
+path.getBoundingClientRect();
+
+window.addEventListener("scroll", function(e) {
+    var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop - 800) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+    /*  - 800 para delay */
+
+    var drawLength = pathLength * scrollPercentage;
+
+    path.style.strokeDashoffset = pathLength - drawLength;
+        
+    if (scrollPercentage >= 0.99) {
+        path.style.strokeDasharray = "none";
+        
+    } else {
+        path.style.strokeDasharray = pathLength + ' ' + pathLength;
+    }
+
+
+
+    /* PARALLAX */
+    const target = document.querySelectorAll('.scroll');
+
+    var index = 0, lenght = target.length;
+    for (index; index < lenght; index++){
+        var pos = window.pageYOffset*target[index].dataset.rate;
+
+        if(target[index].dataset.direction === 'vertical'){
+            target[index].style.transform = 'translate3d(0px,'+pos+'px, 0px)';
+        }else{
+            var posX = window.pageYOffset * target[index].dataset.ratex;
+            var posY = window.pageYOffset * target[index].dataset.ratey;
+
+            target[index].style.transform = 'translate3d('+posX+'px,'+posY+'px,0px)';
+        }
+    }
+
+});
+
+</script>
+
+    
+</body>
+</html>

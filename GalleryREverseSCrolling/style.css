@@ -74,8 +74,8 @@ body {
 .right {
   width: 50%;
   height: 100vh;
-  margin-top: -5500px; /*Start offset, put it at same as*/
-  color: #9e9e9e;
+  margin-top: -5500px;
+  /*Startoffset,putitatsameas*/color: #9e9e9e;
   text-align: center;
 }
 .right .arrow:nth-child(1){
